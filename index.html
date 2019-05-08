@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-hans">
 <head>
   <meta charset="utf-8">
   <title>&lt;css-doodle /&gt;</title>
   <meta name="keywords" content="css, web components">
-  <meta name="description" content="A web component for drawing patterns with CSS">
+  <meta name="description" content="一个用 CSS 来绘制图案的 web component">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="lib/codemirror/style.css">
   <link rel="stylesheet" href="style.css?e34c5ce67318483f1d5b98a4f198c4c3">
@@ -17,9 +17,9 @@
     <css-doodle use="var(--flags)"></css-doodle>
     <header>
       <h1>&lt; <em>css-doodle</em> /&gt; </h1>
-      <p>A web component for drawing patterns with CSS</p>
+      <p>一个用 CSS 来绘制图案的 web component</p>
       <nav>
-        <a href="#usage">Usage ↓</a>
+        <a href="#usage">使用说明 ↓</a>
         <a href="https://codepen.io/collection/XyVkpQ/">CodePen</a>
         <a href="https://github.com/css-doodle/css-doodle">GitHub</a>
       </nav>
@@ -37,47 +37,46 @@
 
     <!-- intro -->
     <section class="intro wrap">
-      <h2><a name="intro"></a>Introduction</h2>
+      <h2><a name="intro"></a>简介</h2>
       <p>
-        <em>&lt;css-doodle /&gt; </em> is based on
-        <a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM v1</a> and
+        <em>&lt;css-doodle /&gt; </em> 基于
+        <a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM v1</a> 和
         <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements">Custom Elements v1</a>.
-        You can use it on latest <em>Chrome</em>, <em>Safari</em> and <em>Firefox</em> right now without polyfills.
+        你可以在最新版的 <em>Chrome</em>, <em>Safari</em> 或 <em>Firefox</em> 浏览器中使用它而不用引入额外的兼容方案。
       </p>
       <p>
-        The component will generate a grid of divs by the rules (plain CSS) inside it.
-        You can easily manipulate those cells using CSS to come up with a graphic pattern or an animated graph.
-        The limit is the limit of CSS itself.
+        组件将按其中的规则（纯 CSS 代码）生成一个 div 网格。
+        你可以通过操作单元格，很方便的生成图形图案或者动画图表。
+        CSS 能做到的它都能做到。
       </p>
     </section>
 
     <!-- getting started -->
     <section class="gettting-started wrap">
-      <h2><a name="getting-started"></a>Getting Started</h2>
+      <h2><a name="getting-started"></a>起步</h2>
       <p>
-        Include the script directly from <a href="https://cdnjs.com/libraries/css-doodle">cdnjs</a> and everything is ready:
+        直接使用 <a href="https://cdnjs.com/libraries/css-doodle">cdnjs</a> 引用脚本就可以了：
       </p>
       <p class="first-code-sample">
         <textarea code>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.7.1/css-doodle.min.js"></script>
 
           <css-doodle>
-            /* put your code here */
+            /* 这里写你的代码 */
           </css-doodle>
         </textarea>
       </p>
-      <p>If cdnjs is not ready, just use:</p>
+      <p>如果 CDN 有问题，也可以使用下面的链接:</p>
       <p>
         <textarea code>
           <script src="https://unpkg.com/css-doodle@0.7.1/css-doodle.min.js"></script>
         </textarea>
       </p>
-      <p>You can also install it from <a href="http://npmjs.org/package/css-doodle">npm</a> and import the module in JavaScript:
-      <p>
+      <p>你也可以安装并引用 <a href="http://npmjs.org/package/css-doodle">npm</a> 上的 JavaScript 模块:<p>
         <textarea code>
           npm install css-doodle
 
-          /* import it */
+          /* 引入 */
           import 'css-doodle';
         </textarea>
       </p>
@@ -86,16 +85,15 @@
     <!-- usage -->
     <section class="usage">
       <div class="wrap">
-        <h2><a name="usage"></a>Usage</h2>
+        <h2><a name="usage"></a>使用说明</h2>
         <p>
-          The syntax of <em>&lt;css-doodle /&gt;</em> is based on CSS and provides several extra utility
-          functions and shorthand properties.
+          <em>&lt;css-doodle /&gt;</em> 的语法是基于 CSS 的，同时也提供了几个额外的工具函数和快捷属性
         </p>
 
         <ul class="nav">
-          <li> <a href="#grid">Grid</a></li>
+          <li> <a href="#grid">网格 Grid</a></li>
           <li>
-            <a href="#selectors">Selectors</a>
+            <a href="#selectors">选择器 Selectors</a>
             <ul>
               <li> <a href="#selector-:doodle">:doodle</a></li>
               <li> <a href="#selector-:container">:container</a></li>
@@ -109,7 +107,7 @@
             </ul>
           </li>
           <li>
-            <a href="#properties">Properties</a>
+            <a href="#properties">属性 Properties</a>
             <ul>
               <li> <a href="#property-@grid">@grid</a></li>
               <li> <a href="#property-@use">@use</a></li>
@@ -121,7 +119,7 @@
             </ul>
           </li>
           <li>
-            <a href="#functions">Functions</a>
+            <a href="#functions">函数 Functions</a>
             <ul>
               <li> <a href="#function-@index">@index</a></li>
               <li> <a href="#function-@row">@row</a></li>
@@ -180,11 +178,10 @@
       </section>
 
       <article class="wrap">
-        <h3><a name="grid"></a>Grid</h3>
+        <h3><a name="grid"></a>网格 Grid</h3>
 
         <p>
-          The number of rows and columns in the grid is defined by the <code>grid</code> attribute on the element,
-          ranged from <em>1</em> to <em>32</em>. It's default to be <em>1x1</em> when no value or 0 is given.
+          元素上的 <code>grid</code> 属性定义了网格的行数和列数，范围由 <em>1</em> 到 <em>32</em>。如果不设置这个值，或者设置为 0 时，默认是 <em>1x1</em>
         </p>
 
         <p class="has-preview">
@@ -206,7 +203,7 @@
           </css-doodle>
         </p>
 
-        <p>The row or column is limited up to <em>1024</em> only when the grid is 1-dimensional: </p>
+        <p>行/列数的乘积最大值是 <em>1024</em>: </p>
         <p class="has-preview">
           <textarea code>
             <css-doodle grid="35x1">
@@ -231,7 +228,7 @@
         </p>
 
         <p>
-           The following formats of <code>grid</code> value are recognizable:
+          下面这些格式的 <code>grid</code> 值都是可认别的:
         </p>
         <div class="list-items">
           <ul>
@@ -244,9 +241,7 @@
           </ul>
         </div>
 
-        <p>
-          There's an alternative way to set up the <code>grid</code> by using the <a href="#property-@grid">@grid</a> property.
-        </p>
+        <p>另外一种设置 <code>grid</code> 的方法是使用 <a href="#property-@grid">@grid</a> 属性</p>
         <p class="has-preview">
           <textarea code>
             <css-doodle>
@@ -270,15 +265,12 @@
       </article>
 
       <article class="wrap">
-        <h3><a name="selectors"></a>Selectors</h3>
+        <h3><a name="selectors"></a>选择器 Selectors</h3>
 
         <section>
           <h4><a name="selector-:doodle"></a>:doodle</h4>
           <p>
-            The <code>:doodle</code>
-            is a special selector indicates to the component element itself.
-            Note that the styles would be over-written by your normal css files outside.
-            <span class="tip">(try to hover on the doodle)</span>
+            <code>:doodle</code> 是一个特殊的选择器，用来表示元素本身。注意样式会被外部 CSS 覆盖。（试试把鼠标移到右边的 doodle 上去）
           </p>
           <p class="has-preview">
             <textarea code>
@@ -313,9 +305,7 @@
         <section>
           <h4><a name="selector-:container"></a>:container</h4>
           <p>
-            The <code>:container</code>
-            is the container element that holds all the cells. It's styled using Grid Layout.
-            And you may want to set <code>grid-gap</code> inside it.
+            <code>:container</code> 选择器容纳了所有的单元格。它使用网格布局来定义样式。你可能会用到 <code>grid-gap</code> 来设置网格的间距
           </p>
           <p class="has-preview">
             <textarea code>
@@ -339,9 +329,7 @@
               background: #60569e;
             </css-doodle>
           </p>
-          <p>
-            It inherits all the grid properties from <code>:doodle</code> so it's why this also works:
-          </p>
+          <p>它继承了所有 <code>:doodle</code> 选择器上的网格属性，所以下面这种写法也是可以的：</p>
           <p class="no-preview">
             <textarea code>
               :doodle {
@@ -353,7 +341,7 @@
 
         <section>
           <h4><a name="selector-@nth"></a>@nth(n, ...)</h4>
-          <p> Select the nth cell like <code> :nth-child(n)</code>.</p>
+          <p>像 <code> :nth-child(n)</code> 一样选择第 N 个单元格.</p>
           <p class="has-preview">
             <textarea code>
               @nth(5) {
@@ -395,7 +383,7 @@
 
         <section>
           <h4><a name="selector-@even"></a>@even</h4>
-          <p> Select cells like <code> :nth-child(even)</code> but shorter.</p>
+          <p>像 <code> :nth-child(even)</code> 一样选择偶数个单元格，但是更简短。</p>
           <p class="has-preview">
             <textarea code>
               @even {
@@ -420,7 +408,7 @@
 
         <section>
           <h4><a name="selector-@odd"></a>@odd</h4>
-          <p> Select cells like <code> :nth-child(odd)</code>.</p>
+          <p>像 <code> :nth-child(odd)</code> 一样选择奇数个单元格。</p>
           <p class="has-preview">
             <textarea code>
               @odd {
@@ -445,7 +433,7 @@
 
         <section>
           <h4><a name="selector-@at"></a>@at(row, col)</h4>
-          <p>Select cell at specific row and column.</p>
+          <p>选择指定行/列号的单元格。</p>
           <p class="has-preview">
             <textarea code>
               @at(4, 2) {
@@ -472,7 +460,7 @@
 
         <section>
           <h4><a name="selector-@random"></a>@random([ ratio ])</h4>
-          <p>Select cells randomly. The <code>ratio</code> accepts value between <code>0</code> and <code>1</code>. Defaults to <code>0.5</code>.</p>
+          <p>随机地选择单元格，<code>ratio</code> 比率介于 <code>0</code>~<code>1</code> 之间。默认值 <code>0.5</code>。</p>
           <p class="has-preview">
             <textarea code>
               @random {
@@ -496,7 +484,7 @@
               margin: .5px;
             </css-doodle>
           </p>
-          <p>The selector can be applied multiple times.</p>
+          <p>这个选择器可以使用多次。</p>
           <p class="has-preview">
             <textarea code>
               @random { border-top: 1px solid #60569e; }
@@ -534,7 +522,7 @@
 
         <section>
           <h4><a name="selector-@row"></a>@row(n, ...)</h4>
-          <p> Select the nth row of the grid.</p>
+          <p>选择网格中第 N 行。</p>
           <p class="has-preview">
             <textarea code>
               @row(3) {
@@ -558,7 +546,7 @@
             </css-doodle>
           </p>
           <p>
-            The <code>odd</code> and <code>even</code> is supported.
+            <code>odd</code> 和 <code>even</code> 也是支持的。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -593,7 +581,7 @@
 
         <section>
           <h4><a name="selector-@col"></a>@col(n, ...)</h4>
-          <p> Select the nth column of the grid.</p>
+          <p>选择网格中第 N 列。</p>
           <p class="has-preview">
             <textarea code>
               @col(3) {
@@ -617,7 +605,7 @@
             </css-doodle>
           </p>
           <p>
-            You can use <code>odd</code> and <code>even</code> too.
+            同样支持 <code>odd</code> 和 <code>even</code>。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -646,11 +634,11 @@
       </article>
 
       <article class="wrap">
-        <h3><a name="properties"></a>Properties</h3>
+        <h3><a name="properties"></a>属性 Properties</h3>
 
         <section>
           <h4><a name="property-@grid"></a>@grid</h4>
-          <p>Another way to set the <code>grid</code> attribute and the rule has higher priority.</p>
+          <p>另外一种设置 <code>grid</code> 属性的方法具有更高的优先级。</p>
           <p class="has-preview">
             <textarea code>
               <css-doodle grid="5">
@@ -669,7 +657,7 @@
             </css-doodle>
           </p>
 
-          <p>Set grid and doodle size at the same time: </p>
+          <p>同时设置网格属性（@grid）和 doodle 尺寸（@size）：</p>
           <p class="has-preview">
             <textarea code>
               <css-doodle>
@@ -690,7 +678,7 @@
 
          <section>
           <h4><a name="property-@use"></a>@use</h4>
-          <p>Import styles from custom properties. It lets you write styles from normal css files.</p>
+          <p>从自定义属性引入样式。这样就可以把样式写在通用 CSS 文件中了。</p>
           <p class="no-preview">
             <textarea code>
               <style>
@@ -738,7 +726,7 @@
           </p>
 
           <p>
-            You can add multiple rules in a natural way:
+            可以很自然地添加多个规则：
           </p>
            <p class="has-preview">
             <textarea code>
@@ -753,7 +741,7 @@
               @use: var(--rule-a), var(--rule-b);
             </css-doodle>
           </p>
-          <p>Or define it in the <code>use</code> attribute on the element.
+          <p>或者使用 <code>use</code> 属性来默认引入这个样式规则
            <p class="no-preview">
             <textarea code>
               <css-doodle use="var(--my-rule)"></css-doodle>
@@ -763,7 +751,7 @@
 
         <section>
           <h4><a name="property-@size"></a>@size, @min-size, @max-size</h4>
-          <p>Set width and height in one place.</p>
+          <p>在一个地方设置宽度和高度</p>
           <p class="has-preview">
             <textarea code>
               @size: 10em;
@@ -798,7 +786,7 @@
 
         <section>
           <h4><a name="property-@place-cell"></a>@place-cell</h4>
-          <p>Place cells relative to the grid. </p>
+          <p>相对于网格来定位单元格。</p>
           <p class="has-preview">
             <textarea code>
               @size: 1.6em;
@@ -832,7 +820,7 @@
 
         <section>
           <h4><a name="property-@shape"></a>@shape</h4>
-          <p>Return a css shape which generated with <code>clip-path</code> and <code>polygon()</code>.</p>
+          <p>返回一个使用 <code>clip-path</code> 和 <code>polygon()</code> 生成的图形。</p>
           <p class="has-preview">
             <textarea code>
               :doodle {
@@ -858,7 +846,7 @@
             </css-doodle>
           </p>
           <div class="basic-shapes">
-            <h5><a name="basic-shape"></a>Basic shapes</h5>
+            <h5><a name="basic-shape"></a>基本的图形</h5>
             <div class="shapes">
               <!-- shapes -->
             </div>
@@ -886,10 +874,10 @@
       </section>
 
       <article class="wrap">
-        <h3><a name="functions"></a>Functions</h3>
+        <h3><a name="functions"></a>函数 Functions</h3>
         <section>
           <h4><a name="function-@index"></a>@index</h4>
-          <p> Returns the current index value of the cell.</p>
+          <p>返回当前单元格的位置索引</p>
           <p class="has-preview">
             <textarea code>
               :after {
@@ -938,13 +926,13 @@
             </css-doodle>
           </p>
           <p class="alias">
-            Alias: <code>@i</code>
+            简写: <code>@i</code>
           </p>
         </section>
 
         <section>
           <h4><a name="function-@row"></a>@row</h4>
-          <p> Returns the current row number of the cell.</p>
+          <p>返回当前单元格所在的行位置。</p>
           <p class="has-preview">
             <textarea code>
               :after {
@@ -968,7 +956,7 @@
 
         <section>
           <h4><a name="function-@col"></a>@col</h4>
-          <p> Returns the current column number of the cell.</p>
+          <p>返回当前单元格所在的列位置。</p>
           <p class="has-preview">
             <textarea code>
               :after {
@@ -990,7 +978,7 @@
 
         <section>
           <h4><a name="function-@size-row"></a>@size-row</h4>
-          <p> Returns the max row number of the grid.</p>
+          <p>返回网格的最大行数。</p>
           <p class="has-preview">
             <textarea code>
               :doodle {
@@ -1017,7 +1005,7 @@
 
         <section>
           <h4><a name="function-@size-col"></a>@size-col</h4>
-          <p> Returns the max column number of the grid.</p>
+          <p>返回网格的最大列数。</p>
           <p class="has-preview">
             <textarea code>
               :doodle {
@@ -1044,7 +1032,7 @@
 
         <section>
           <h4><a name="function-@size"></a>@size</h4>
-          <p> Returns the total cells number of the grid.</p>
+          <p>返回网格的单元格总数。</p>
           <p class="has-preview">
             <textarea code>
               :doodle {
@@ -1068,7 +1056,7 @@
             </css-doodle>
           </p>
           <p>
-            These numbers can be used to generate dynamic values together with <code>calc()</code>.
+            这些数字都可以使用 <code>calc()</code> 动态生成新值。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1093,8 +1081,7 @@
         <section>
           <h4><a name="function-@pick"></a>@pick(v1, v2,...)</h4>
           <p>
-            Randomly pick a value from the given list.
-            <br/><span class="tip">(try to click on the doodle)</span>
+            从提供的参数中随机地取一个值。（试试把鼠标移到右边的 doodle 上去）
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1115,7 +1102,7 @@
             </css-doodle>
           </p>
           <p>
-            It supports range format like this: <code>[0-9a-z]</code>
+            支持范围选择格式<code>[0-9a-z]</code>
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1136,15 +1123,13 @@
             </css-doodle>
           </p>
           <p class="alias">
-            Alias: <code>@p</code>
+            简写: <code>@p</code>
           </p>
         </section>
 
         <section>
           <h4><a name="function-@pick-n"></a>@pick-n(v1, v2,...)</h4>
-          <p>
-            Pick a value from the given list one by one.
-          </p>
+          <p>从指定列表中逐个选择一个值。 </p>
           <p class="has-preview">
             <textarea code>
               opacity: @pick-n(1, .6, .3, .1);
@@ -1164,13 +1149,13 @@
             </css-doodle>
           </p>
           <p class="alias">
-            Alias: <code>@pn</code>
+            简写: <code>@pn</code>
           </p>
         </section>
         <section>
           <h4><a name="function-@pick-d"></a>@pick-d(v1, v2,...)</h4>
           <p>
-            Pick a value like <code>@pick-n()</code>, but with distinct random order.
+            像 <code>@pick-n()</code> 一样选择一个值，但是随机选取。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1191,15 +1176,15 @@
             </css-doodle>
           </p>
           <p class="alias">
-            Alias: <code>@pd</code>
+            简写: <code>@pd</code>
           </p>
         </section>
 
         <section>
           <h4><a name="function-@rand"></a>@rand(start [,end])</h4>
           <p>
-            Returns a random value between two numbers.
-            <br/><span class="tip">(try to click the doodle)</span>
+            随机返回两个数字之间的一个值。
+            <br/><span class="tip">（试试把鼠标移到右边的 doodle 上去）</span>
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1221,7 +1206,7 @@
               );
             </css-doodle>
           </p>
-          <p>It also recognizes the letter range: </p>
+          <p>同样也可以识别子母范围：</p>
           <p class="has-preview">
             <textarea code>
               :after {
@@ -1241,14 +1226,13 @@
             </css-doodle>
           </p>
           <p class="alias">
-            Alias: <code>@r</code>
+            简写: <code>@r</code>
           </p>
         </section>
 
         <section>
           <h4><a name="function-@last"></a>@last-pick, @last-rand</h4>
-          <p>
-            Returns the last value of <code>@pick</code>, <code>@pick-n</code>, <code>@pick-d</code> and <code>@rand</code>.
+          <p>返回 <code>@pick</code>, <code>@pick-n</code>, <code>@pick-d</code> 或 <code>@rand</code> 取到的最后一个值。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1271,15 +1255,15 @@
             </css-doodle>
           </p>
           <p class="alias">
-            Alias: <code>@lp</code> and <code>@lr</code>, respectively.
+            简写: <code>@lp</code> 和 <code>@lr</code>
           </p>
         </section>
 
         <section>
           <h4><a name="function-@repeat"></a>@repeat(times, value)</h4>
           <p>
-            Compose the given value multiple times.
-            <br/><span class="tip">(try to click the doodle)</span>
+            多次组合指定的值
+            <br/><span class="tip">（试试把鼠标移到右边的 doodle 上去）</span>
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1314,7 +1298,7 @@
         <section>
           <h4><a name="function-@multiple"></a>@multiple(times, value)</h4>
           <p>
-            Same as <code>@repeat()</code>, but seperated with comma.
+            像 <code>@repeat()</code>一样，但是使用逗号分割。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1344,15 +1328,14 @@
             </css-doodle>
           </p>
           <p class="alias">
-            Alias: <code>@m</code>
+            简写: <code>@m</code>
           </p>
         </section>
 
         <section>
           <h4><a name="function-@n"></a>@n()</h4>
           <p>
-            Used only inside <code>@repeat</code> and <code>@multiple</code> functions to indicate the
-            current repeating count.
+            只能用在 <code>@repeat</code> 或 <code>@multiple</code> 中，表示当前重复的计数器。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1373,8 +1356,7 @@
           </p>
 
           <p>
-            Since <code>0.6.2</code>, the number following the function name will be treated as the first
-            parameter, so this will make the code much cleaner:
+            <code>0.6.2</code> 版本后，跟在函数后面的数字将被当成第一个参数，这样看起来更简洁一点。
           </p>
           <textarea code>
             box-shadow: @m5(
@@ -1386,8 +1368,8 @@
         <section>
           <h4><a name="function-@svg"></a>@svg(svg)</h4>
           <p>
-            Use SVG directly as background image.
-            The recommended way to use SVG is through with the <code>@use</code> property.
+            使用 SVG 做背景图片。
+            建议通过 <code>@use</code> 属性引用 SVG。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1438,7 +1420,7 @@
         <section>
           <h4><a name="function-@Math"></a>@&lt;Math&gt;</h4>
           <p>
-            All Math functions and constants are available prefixed with <code>'@'</code>.
+            所有 Math 函数及其常量都可以 <code>'@'</code> 前缀调用到。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1492,7 +1474,7 @@
         <section>
           <h4><a name="function-@calc"></a>@calc(expr)</h4>
           <p>
-            Evaluate calculations.
+            求值计算
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1520,7 +1502,7 @@
         <section>
           <h4><a name="function-@var"></a>@var(expr)</h4>
           <p>
-            Same as <code>var()</code>. Used to prevent the browser from evaluating the value inside nested vars.
+            和 <code>var()</code> 一样. 用来限止浏览器从嵌套的 vars 中求值。
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1546,7 +1528,7 @@
         <section>
           <h4><a name="function-@hex"></a>@hex(num)</h4>
           <p>
-            Transform a number to the hex format.
+            转换数字成十六进制数.
           </p>
           <p class="has-preview">
             <textarea code>
@@ -1588,14 +1570,14 @@
         <h3><a name="js-api"></a>JS API </h3>
         <section>
           <h4><a name="js-api-grid"></a>grid</h4>
-          <p>Getter/setter for the <code>grid</code> attribute on the element. </p>
+          <p>元素上 <code>grid</code> 属性的读取与设置。</p>
           <p>
             <textarea code>
               const doodle = document.querySelector('css-doodle');
 
-              /* Note that the grid value inside the :doodle selector has higher
-                 priority than the attribute value on the element. So this setter
-                 operation may not have an affect on the final grid value. */
+              /* 注意通过 :doodle 选择器中设置 grid 的值优先级高于
+                 通过元素属性上设置的，所以通过 JS 设置的操作可能并
+                 不一定产生效果 */
               doodle.grid = "5";
 
               console.log(doodle.grid);
@@ -1605,7 +1587,7 @@
         </section>
          <section>
           <h4><a name="js-api-use"></a>use</h4>
-          <p>Getter/setter for the <code>use</code> attribute on the element. </p>
+          <p>元素上 <code>use</code> 属性的读取与设置。</p>
           <p>
             <textarea code>
               const doodle = document.querySelector('css-doodle');
@@ -1618,7 +1600,7 @@
         </section>
         <section>
           <h4><a name="js-api-update"></a>update([styles])</h4>
-          <p>Re-render the component (with given styles).</p>
+          <p>重新渲染组件（可以传入新样式）。</p>
           <p>
             <textarea code>
               const doodle = document.querySelector('css-doodle');
@@ -1672,8 +1654,7 @@
     </css-doodle>
     <div class="about wrap">
       <p>
-        Handcrafted with
-        <css-doodle>
+        由 <a href="https://yuanchuan.dev">yuanchuan</a> 用 <css-doodle>
           :doodle {
             vertical-align: middle;
             display: inline-block;
@@ -1681,9 +1662,7 @@
             background: rgba(255, 87, 34, 0.6);
             @shape: heart;
           }
-        </css-doodle>
-        by <a href="https://yuanchuan.dev">yuanchuan</a>. <br />
-        MIT Licensed.
+        </css-doodle> 手工制作，使用 MIT 许可
       </p>
     </div>
   </footer>
